@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <h2>Login</h2>
+    <div class="container">
+        <label for="uname"><b>Username</b></label><br />
+        <input id="login_username" type="text" placeholder="Enter Username" name="uname" required><br />
+
+        <label for="psw"><b>Password</b></label><br />
+        <input id="login_password" type="password" placeholder="Enter Password" name="psw" required><br />
+
+        <button type="submit" onclick="Login();">Login</button><br />
+    </div>
+
+    <h2>Register</h2>
+    <div class="container">
+        <label for="uname"><b>Username</b></label><br />
+        <input id="register_username" type="text" placeholder="Enter Username" name="uname" required><br />
+
+        <label for="psw"><b>Password</b></label><br />
+        <input id="register_password" type="password" placeholder="Enter Password" name="psw" required><br />
+
+        <label for="psw"><b>Key</b></label><br />
+        <input id="register_key" type="password" placeholder="Enter Password" name="psw" required><br />
+
+        <button type="submit" onclick="Register();">Login</button><br />
+    </div>
+
+</body>
+</html>
+
+<script>document.addEventListener('contextmenu', event => event.preventDefault());</script> <!-- Remove right click from form to prevent use of developper tools -->
+
+<script>function Login(username, password) { CefSharp.PostMessage("{ 'username' : '" + document.getElementById("login_username").value + "', 'password' : '" + document.getElementById("login_password").value + "' }"); }</script>
+<script>function Register(username, password) { CefSharp.PostMessage("{ 'username' : '" + document.getElementById("register_username").value + "', 'password' : '" + document.getElementById("register_password").value + "', 'key' : '" + document.getElementById("register_key").value + "' }"); }</script>
