@@ -11,10 +11,10 @@ namespace KeyAuthExample
     {
         public LoaderInit() => InitializeComponent();
 
-        static string name = "Citrus";
-        static string ownerid = "7pr3DBb5Id";
-        static string secret = "12e93942aeed7be8bcaf9f74709612ba54b5230f4f5951a85ef77b0c34d71737";
-        static string version = "1.0";
+        static string name = "";
+        static string ownerid = "";
+        static string secret = "";
+        static string version = "";
 
         public static api KeyAuthApp = new api(name, ownerid, secret, version);
         public class UserInformation
